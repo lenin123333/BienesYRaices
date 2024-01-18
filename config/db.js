@@ -17,7 +17,7 @@ const db=new Sequelize(process.env.DB_NOMBRE,process.env.DB_USER,
     // 30 segundos antes de mandar error que no puedo conectar
     // 10 segundos verifica que no hay movimientos para finalizar la conexion para liberar memoria
     pool:{
-        max:20,
+        max:10,
         min:0,
         acquire:30000,
         idle:10000
