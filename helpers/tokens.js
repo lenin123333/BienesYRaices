@@ -1,6 +1,7 @@
 import  jwt  from "jsonwebtoken";
 
 const generarJWT = datos =>  jwt.sign({
+    
     //Autenticar al usuario
         id: datos.id,
         nombre: datos.nombre

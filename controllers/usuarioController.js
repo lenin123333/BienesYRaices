@@ -70,6 +70,7 @@ const autenticar = async (req, res) => {
    }
 
    const token = generarJWT({id:usuario.id,nombre:usuario.nombre})
+   console.log('Valor de JWT_SECRET:', process.env.JWT_SECRET);
    //Almacenar en un cookie
    return res.cookie('_token', token, {
         httpOnly:true,
