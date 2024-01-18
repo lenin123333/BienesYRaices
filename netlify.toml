@@ -1,3 +1,3 @@
 [build]
-  command = "npm run build"  # O el comando que usas para construir tu aplicación
-  publish = "dist"           # Directorio que Netlify debe publicar
+  command = "npm install && npm run start "
+  publish = "/opt/build/repo/dist"
