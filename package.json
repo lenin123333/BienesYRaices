@@ -6,14 +6,14 @@
   "type": "module",
   "scripts": {
     "start": "node index.js",
-    "build": "node index.js",
     "server": "nodemon index.js",
     "css": "postcss public/css/tailwind.css -o public/css/app.css --watch",
     "js": "webpack --watch",
     "dev": "concurrently \"npm run css\" \"npm run js\" \"npm run server\" ",
     "db:importar": "node ./seed/seeder.js -i",
-    "db:eliminar": "node ./seed/seeder.js -e"
-  },
+    "db:eliminar": "node ./seed/seeder.js -e",
+    "build": "npm run css && npm run js && rm -rf node_modules && npm install --production"
+ },
   "keywords": [
     "MVC",
     "Pug",
