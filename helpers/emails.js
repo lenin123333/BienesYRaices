@@ -17,12 +17,12 @@ const emailRegistro = async(datos) =>{
     await transport.sendMail({
       from: 'BienesRaices.com',
       to: email,
-      subject: 'Bienvenido a Bienes Raices,Restablecce tu cuenta',
-      text: 'Restablecce tu cuenta en BienesRaices.com',
+      subject: 'Bienvenido a Bienes Raices,Confrima tu cuenta',
+      text: 'Confirma tu cuenta en BienesRaices.com',
       html: `
-      <h1>Restablecce tu acceso a Bienes Raices ${nombre}</h1>
-      <p>Hemos Recibido un Email , para volver activar tu cuenta haz click en el siguiente enlace</p>
-      <a href="${process.env.BACKEND_URL}:${process.env.PORT ?? 3000}/auth/confirmar/${token}">Activar Cuenta</a>
+      <h1>Bienvenido a Bienes Raices ${nombre}</h1>
+      <p>Hemos Recibido un Email de Confirmacion, para activar tu cuenta haz click en el siguiente enlace</p>
+      <a href="${process.env.BACKEND_URL}/auth/confirmar/${token}">Activar Cuenta</a>
       <p>Si no has recibido este email por favor ignora este mensaje</p>
       `
   })
@@ -44,13 +44,14 @@ const emailOlvidePassword = async(datos) =>{
   await transport.sendMail({
     from: 'BienesRaices.com',
     to: email,
-    subject: 'Bienvenido a Bienes Raices,Confrima tu cuenta',
+    subject: 'Bienvenido a Bienes Raices,Restablecce tu cuenta',
     text: 'Confirma tu cuenta en BienesRaices.com',
     html: `
-    <h1>Bienvenido a Bienes Raices ${nombre}</h1>
-    <p>Hemos Recibido un Email de Confirmacion, para activar tu cuenta haz click en el siguiente enlace</p>
-    <a href="${process.env.BACKEND_URL}:${process.env.PORT ?? 3000}/auth/olvide-password/${token}">Restablecer Password</a>
-    <p>Si no has recibido este email por favor ignora este mensaje</p>
+      <h1>Restablecce tu acceso a Bienes Raices ${nombre}</h1>
+      <p>Hemos Recibido un Email , para volver activar tu cuenta haz click en el siguiente enlace</p>
+      <a href="${process.env.BACKEND_URL}/auth/olvide-password/${token}">Restablecer Password</a>
+      <p>Si no has recibido este email por favor ignora este mensaje</p>
+   
     `
 })
  
