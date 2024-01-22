@@ -8,7 +8,8 @@ export default{
         mostrarMapa:'./src/js/mostrarMapa.js',
         mapaInicio:'./src/js/mapaInicio.js',
         cambiarEstado:'./src/js/cambiarEstado.js',
-        agregarImagenPerfil:'./src/js/agregarImagenPerfil.js'
+        agregarImagenPerfil:'./src/js/agregarImagenPerfil.js',
+        menuHamburguesa:'./src/js/menuHamburguesa.js'
     },
     output:{
         filename:'[name].js',

@@ -8,4 +8,16 @@ header(class=" bg-indigo-600 p-4")
                     a(href="/mi-perfil") Mi Perfil 
                     form(action="/auth/cerrar-sesion" method="POST")     
                         input(type="hidden", name="_csrf" value= csrfToken)
-                        input( type="submit" class=" bg-indigo-800 py-2 px-10 rounded-lg" value="Cerrar Sesión") 
+                        input( type="submit" class=" bg-indigo-800 py-2 px-10 rounded-lg cursor-pointer" value="Cerrar Sesión") 
+                div(class="space-y-2 md:hidden flex flex-col items-end cursor-pointer" id="btn-burger")
+                    span(class="block w-8 h-1 bg-white")
+                    span(class="block w-8 h-1 bg-white")
+                    span(class="block w-8 h-1 bg-white  ")
+                    nav(class="pt-5 space-y-4  hidden flex flex-col items-end  text-white font-bold" id="menu-burger")
+                        a(href="/mi-perfil") Mi Perfil 
+                        a(href="/mis-propiedades") Mis Propiedades
+                        form(action="/auth/cerrar-sesion" method="POST")     
+                            input(type="hidden", name="_csrf" value= csrfToken)
+                            input( type="submit" class=" bg-indigo-800 py-2 px-10 rounded-lg cursor-pointer" value="Cerrar Sesión") 
+
+
